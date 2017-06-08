@@ -8,4 +8,4 @@ RUN apk add --no-cache python3 && \
 
 ADD requirements.txt /
 RUN pip install --no-cache-dir -r requirements.txt
-CMD [ "python", "./app.py" ]
+CMD [ "python3", "./app.py" ]
