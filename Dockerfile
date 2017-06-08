@@ -6,7 +6,7 @@ RUN apk add --no-cache ca-certificates python3 && \
     pip3 install --upgrade pip setuptools && \
     rm -r /root/.cache
 
-ADD requirements.txt /code
+COPY requirements.txt /code
 WORKDIR /code
 
 RUN pip install --no-cache-dir -r requirements.txt
