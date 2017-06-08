@@ -1,0 +1,9 @@
+boto3==1.4.4
+cachetools==2.0.0
+dogstatsd-python==0.5.6
+elasticsearch==5.4.0
+mysql-connector==2.1.4
+pika==0.10.0
+requests==2.13.0
+jira==1.0.10
+tornado==4.4.2
