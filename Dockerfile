@@ -1,13 +1,15 @@
 FROM alpine:3.5
 
-RUN apk add --no-cache ca-certificates python3 && \
-    python3 -m ensurepip && \
-    rm -r /usr/lib/python*/ensurepip && \
-    pip3 install --upgrade pip setuptools && \
-    rm -r /root/.cache
-
 ADD requirements.txt /code/
 WORKDIR /code
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN apk add --no-cache ca-certificates python3 && \
+    apk add --virtual .build-dependencies gcc && \
+    python3 -m ensurepip && \
+    rm -r /usr/lib/python*/ensurepip && \
+    pip3 install --upgrade pip setuptools && \
+    pip3 install --no-cache-dir -r requirements.txt && \
+    rm -r /root/.cache && \
+    apk del .build-dependencies
+
 CMD [ "python3", "app.py" ]
