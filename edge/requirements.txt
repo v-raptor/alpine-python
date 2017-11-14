@@ -2,7 +2,7 @@ boto3
 cachetools
 dogstatsd-python
 elasticsearch
-mysql-connector
+mysql-connector==2.1.6
 pika
 requests
 jira
