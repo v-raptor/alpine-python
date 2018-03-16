@@ -1,13 +1,15 @@
 boto3
 cachetools
-dogstatsd-python
 elasticsearch
 mysql-connector==2.1.6
 pika
 requests
 jira
-tornado
 pytz
 smart-open
 python-cuckoo
 ujson
+flask
+zmq
+beautifulsoup4
+timeout-decorator
